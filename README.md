@@ -24,3 +24,10 @@ The trade-off is that all input matrices must be dense JavaScript arrays of arra
 - Inconsistent systems (no solution) return `null`.
 - Systems with free variables (infinitely many solutions) also return `null`, because there is no unique vector to return. `rank` still works for these.
 - Partial pivoting is used to mitigate floating-point error; a pivot with magnitude below `1e-12` is treated as zero.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
