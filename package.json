@@ -1,6 +1,6 @@
 {
   "name": "gaussian-elimination-solver-ts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Linear algebra solver using Gaussian elimination with partial pivoting for equations and matrix rank",
   "type": "module",
   "main": "src/index.js",
